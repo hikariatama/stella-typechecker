@@ -1,0 +1,14 @@
+// @expect-success
+language core;
+
+extend with #type-reconstruction;
+
+fn apply_once(f : auto) -> auto {
+  return fn(x : auto) {
+    return f(x)
+  }
+}
+
+fn main(n : auto) -> Nat {
+  return apply_once(fn(x : auto) { return succ(x) })(n)
+}

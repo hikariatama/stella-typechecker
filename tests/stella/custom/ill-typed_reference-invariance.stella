@@ -1,0 +1,12 @@
+// @expect-error ERROR_UNEXPECTED_SUBTYPE
+language core;
+
+extend with #references, #structural-subtyping, #top-type, #unit-type;
+
+fn consume(ref : &Top) -> Unit {
+  return unit
+}
+
+fn main(n : Nat) -> Unit {
+  return consume(new(n))
+}

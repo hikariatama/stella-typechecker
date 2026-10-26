@@ -1,0 +1,10 @@
+.git
+**/node_modules
+**/dist
+build
+.env
+.env.*
+*.log
+.DS_Store
+debug_tests
+debug.ts

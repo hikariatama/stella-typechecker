@@ -1,0 +1,12 @@
+// @expect-success
+language core;
+
+extend with #references, #sequencing, #unit-type, #let-bindings;
+
+fn bump(ref : &Nat) -> Unit {
+  return ref := succ(*ref)
+}
+
+fn main(n : Nat) -> Nat {
+  return let ref = new(n) in bump(ref); *ref
+}

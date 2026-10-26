@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #ambiguous-type-as-bottom, #structural-subtyping, #lists, #let-bindings;
+
+fn main(n : Nat) -> [Nat] {
+  return let value = [] in value
+}

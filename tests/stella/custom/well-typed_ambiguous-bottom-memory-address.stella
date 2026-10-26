@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #references, #ambiguous-type-as-bottom, #let-bindings, #bottom-type;
+
+fn main(n : Nat) -> &Bot {
+  return let addr = <0x1> in addr
+}

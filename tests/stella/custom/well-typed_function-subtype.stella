@@ -1,0 +1,14 @@
+// @expect-success
+language core;
+
+extend with #structural-subtyping, #top-type;
+
+fn apply(f : fn(Nat) -> Nat) -> Nat {
+  return f(0)
+}
+
+fn main(n : Nat) -> Nat {
+  return apply(fn(x : Top) {
+    return 0
+  })
+}

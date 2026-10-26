@@ -1,0 +1,8 @@
+// @expect-error ERROR_UNEXPECTED_SUBTYPE
+language core;
+
+extend with #type-cast, #records;
+
+fn main(n : Nat) -> Nat {
+  return n cast as { a : Nat }
+}

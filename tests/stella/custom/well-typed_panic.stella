@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #panic;
+
+fn main(n : Nat) -> Nat {
+  return if true then panic! else n
+}

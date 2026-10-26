@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,700&text=STELLA&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-japandi-green: #606c5a;
+  --color-japandi-red: #ab6a57;
+  --color-background: #d5d0c4;
+  --color-card: #e8e2d6;
+  --color-card-hover: #ddd4c4;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #07090d;
+  color: #e2e8f0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-montagu {
+  font-family: "Montagu Slab", serif;
+}
+
+.font-dm-mono {
+  font-family: "DM Mono", monospace;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

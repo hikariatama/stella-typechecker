@@ -1,0 +1,8 @@
+// @expect-error ERROR_UNDEFINED_TYPE_VARIABLE
+language core;
+
+extend with #universal-types;
+
+fn main(value : Nat) -> forall X. fn(X) -> Y {
+  return generic [X] fn(arg : X) { return value }
+}

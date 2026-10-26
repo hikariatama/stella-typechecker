@@ -1,0 +1,12 @@
+// @expect-error ERROR_INCORRECT_NUMBER_OF_TYPE_ARGUMENTS
+language core;
+
+extend with #universal-types;
+
+generic fn pair_left[X, Y](value : X) -> fn(Y) -> X {
+  return fn(other : Y) { return value }
+}
+
+fn main(value : Nat) -> Nat {
+  return pair_left[Nat](value)(false)
+}

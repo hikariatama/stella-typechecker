@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #ambiguous-type-as-bottom, #structural-subtyping, #sum-types, #let-bindings;
+
+fn main(n : Nat) -> Bool + Nat {
+  return let value = inr(n) in value
+}

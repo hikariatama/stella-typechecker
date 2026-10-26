@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #records;
+
+fn main(r : {x : Nat, y : Bool}) -> Nat {
+  return r.x
+}

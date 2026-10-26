@@ -1,0 +1,9 @@
+// @expect-error ERROR_ILLEGAL_LOCAL_EXCEPTION_TYPE
+language core;
+
+extend with #exceptions, #exception-type-declaration;
+
+fn main(n : Nat) -> Nat {
+  exception type = Nat
+  return n
+}

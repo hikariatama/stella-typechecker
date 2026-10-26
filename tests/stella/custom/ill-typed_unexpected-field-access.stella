@@ -1,0 +1,8 @@
+// @expect-error ERROR_UNEXPECTED_FIELD_ACCESS:7:10
+language core;
+
+extend with #records;
+
+fn main(r : {x : Nat}) -> Nat {
+  return r.y
+}

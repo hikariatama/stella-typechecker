@@ -1,0 +1,40 @@
+{
+  "name": "stella-implementation-in-typescript",
+  "version": "0.1.0",
+  "dependencies": {
+    "antlr4": "^4.12.0"
+  },
+  "main": "./build/index.js",
+  "scripts": {
+    "start": "node ./build/index.js",
+    "antlr4": "node ./generateParser.js",
+    "build": "rollup -c rollup.config.mjs",
+    "watch": "rollup -c rollup.config.mjs --watch",
+    "test:unit": "tsx ./tests/test-error-context.ts",
+    "test:stella": "tsx ./tests/test-typechecking.ts stella",
+    "test": "npm run build && npm run test:unit && npm run test:stella",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^18.15.10",
+    "chalk": "^4.1.2",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "rollup": "^3.20.2",
+    "tslib": "^2.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.2",
+    "typescript-eslint": "^8.54.0"
+  }
+}

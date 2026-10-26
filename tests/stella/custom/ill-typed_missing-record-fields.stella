@@ -1,0 +1,8 @@
+// @expect-error ERROR_MISSING_RECORD_FIELDS:7:10
+language core;
+
+extend with #records, #natural-literals;
+
+fn main(n : Nat) -> {x : Nat, y : Bool, z : Nat} {
+  return {x = 67, y = true}
+}

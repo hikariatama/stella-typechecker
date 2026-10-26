@@ -1,0 +1,8 @@
+build/
+node_modules/
+.antlr
+.DS_Store
+
+# dev artefacts
+debug_tests
+debug.ts

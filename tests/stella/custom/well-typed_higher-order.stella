@@ -1,0 +1,6 @@
+// @expect-success
+language core;
+
+fn main(f : fn(Nat) -> Bool) -> Bool {
+  return f(0)
+}

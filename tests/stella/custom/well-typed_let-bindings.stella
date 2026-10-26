@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #let-bindings, #natural-literals;
+
+fn main(n : Nat) -> Nat {
+  return let x = 67 in succ(x)
+}

@@ -1,0 +1,8 @@
+// @expect-error ERROR_UNEXPECTED_RECORD:7:10
+language core;
+
+extend with #records, #natural-literals;
+
+fn main(n : Nat) -> Nat {
+  return {x = 67}
+}

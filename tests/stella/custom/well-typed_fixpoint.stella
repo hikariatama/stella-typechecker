@@ -1,0 +1,12 @@
+// @expect-success
+language core;
+
+extend with #fixpoint-combinator, #natural-literals, #predecessor;
+
+fn main(n : Nat) -> Nat {
+  return fix(fn(f : fn(Nat) -> Nat) {
+    return fn(x : Nat) {
+      return if Nat::iszero(x) then 67 else succ(f(Nat::pred(x)))
+    }
+  })(n)
+}

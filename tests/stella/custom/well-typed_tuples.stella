@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #tuples;
+
+fn main(t : {Nat, Bool, Nat}) -> Nat {
+  return t.1
+}

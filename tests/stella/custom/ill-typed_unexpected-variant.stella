@@ -1,0 +1,8 @@
+// @expect-error ERROR_UNEXPECTED_VARIANT:7:10
+language core;
+
+extend with #variants, #natural-literals;
+
+fn main(n : Nat) -> Nat {
+  return <| x = 67 |>
+}

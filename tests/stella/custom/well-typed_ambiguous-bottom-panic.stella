@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #ambiguous-type-as-bottom, #structural-subtyping, #panic, #let-bindings;
+
+fn main(n : Nat) -> Nat {
+  return let value = panic! in value
+}

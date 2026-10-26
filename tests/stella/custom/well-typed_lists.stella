@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #lists, #natural-literals;
+
+fn main(xs : [Nat]) -> Nat {
+  return if List::isempty(xs) then 67 else List::head(xs)
+}

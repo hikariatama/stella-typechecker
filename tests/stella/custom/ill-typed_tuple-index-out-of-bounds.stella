@@ -1,0 +1,8 @@
+// @expect-error ERROR_TUPLE_INDEX_OUT_OF_BOUNDS:7:10
+language core;
+
+extend with #tuples;
+
+fn main(t : {Nat, Bool}) -> Nat {
+  return t.5
+}

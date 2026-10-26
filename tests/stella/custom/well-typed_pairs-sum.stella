@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #pairs, #sum-types;
+
+fn main(input : {Nat, Bool}) -> Nat + Bool {
+  return if input.2 then inl(input.1) else inr(true)
+}

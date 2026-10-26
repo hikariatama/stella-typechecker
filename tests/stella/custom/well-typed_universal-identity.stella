@@ -1,0 +1,12 @@
+// @expect-success
+language core;
+
+extend with #universal-types;
+
+generic fn identity[T](value : T) -> T {
+  return value
+}
+
+fn main(value : Nat) -> Nat {
+  return identity[Nat](value)
+}

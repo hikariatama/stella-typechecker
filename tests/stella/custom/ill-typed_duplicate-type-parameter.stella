@@ -1,0 +1,12 @@
+// @expect-error ERROR_DUPLICATE_TYPE_PARAMETER
+language core;
+
+extend with #universal-types;
+
+generic fn bad[X, X](value : X) -> X {
+  return value
+}
+
+fn main(value : Nat) -> Nat {
+  return bad[Nat, Nat](value)
+}

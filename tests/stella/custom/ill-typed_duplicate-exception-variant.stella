@@ -1,0 +1,11 @@
+// @expect-error ERROR_DUPLICATE_EXCEPTION_VARIANT
+language core;
+
+extend with #exceptions, #open-variant-exceptions;
+
+exception variant Oops : Nat
+exception variant Oops : Bool
+
+fn main(n : Nat) -> Nat {
+  return n
+}

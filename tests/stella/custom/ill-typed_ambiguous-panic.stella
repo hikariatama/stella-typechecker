@@ -1,0 +1,8 @@
+// @expect-error ERROR_AMBIGUOUS_PANIC_TYPE
+language core;
+
+extend with #panic, #let-bindings;
+
+fn main(n : Nat) -> Nat {
+  return let value = panic! in n
+}

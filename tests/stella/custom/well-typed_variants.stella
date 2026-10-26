@@ -1,0 +1,11 @@
+// @expect-success
+language core;
+
+extend with #variants, #natural-literals, #unit-type;
+
+fn main(v : <| none : Unit, some : Nat |>) -> Nat {
+  return match v {
+      <| none = _ |> => 67
+    | <| some = n |> => n
+  }
+}

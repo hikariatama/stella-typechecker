@@ -1,0 +1,8 @@
+// @expect-error ERROR_NOT_A_TUPLE:7:10
+language core;
+
+extend with #pairs;
+
+fn main(n : Nat) -> Nat {
+  return n.1
+}

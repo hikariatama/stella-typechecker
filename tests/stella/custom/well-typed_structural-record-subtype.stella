@@ -1,0 +1,12 @@
+// @expect-success
+language core;
+
+extend with #records, #structural-subtyping;
+
+fn takeA(record : { a : Nat }) -> Nat {
+  return record.a
+}
+
+fn main(n : Nat) -> Nat {
+  return takeA({ a = n, b = succ(n) })
+}

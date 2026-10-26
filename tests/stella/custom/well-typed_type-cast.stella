@@ -1,0 +1,12 @@
+// @expect-success
+language core;
+
+extend with #type-cast, #top-type, #structural-subtyping, #records;
+
+fn id(x : { a : Top }) -> { a : Top } {
+  return x
+}
+
+fn main(n : Nat) -> Nat {
+  return (id({ a = n }) cast as { a : Nat }).a
+}

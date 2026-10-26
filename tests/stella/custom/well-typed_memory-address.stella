@@ -1,0 +1,12 @@
+// @expect-success
+language core;
+
+extend with #references;
+
+fn load(ref : &Nat) -> Nat {
+  return *ref
+}
+
+fn main(n : Nat) -> Nat {
+  return load(<0x1>)
+}

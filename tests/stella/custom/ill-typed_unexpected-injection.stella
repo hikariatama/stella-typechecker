@@ -1,0 +1,8 @@
+// @expect-error ERROR_UNEXPECTED_INJECTION:7:10
+language core;
+
+extend with #sum-types, #natural-literals;
+
+fn main(n : Nat) -> Nat {
+  return inl(67)
+}

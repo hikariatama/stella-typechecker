@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #natural-literals;
+
+fn main(n : Nat) -> Nat {
+  return succ(67)
+}

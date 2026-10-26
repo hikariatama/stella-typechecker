@@ -1,0 +1,8 @@
+// @expect-success
+language core;
+
+extend with #natural-literals;
+
+fn main(n : Nat) -> Nat {
+  return Nat::rec(n, 67, fn(i : Nat) { return fn(acc : Nat) { return succ(acc) } })
+}

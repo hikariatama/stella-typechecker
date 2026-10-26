@@ -1,0 +1,10 @@
+// @expect-success
+language core;
+
+extend with #exceptions, #open-variant-exceptions, #variants;
+
+exception variant Oops : Nat
+
+fn main(n : Nat) -> Nat {
+  return try { throw(<| Oops = n |>) } catch { <| Oops = value |> => value }
+}

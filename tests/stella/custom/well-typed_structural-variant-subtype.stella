@@ -1,0 +1,15 @@
+// @expect-success
+language core;
+
+extend with #variants, #structural-subtyping;
+
+fn consume(value : <| left : Nat, right : Nat |>) -> Nat {
+  return match value {
+    <| left = n |> => n
+  | <| right = m |> => m
+  }
+}
+
+fn main(n : Nat) -> Nat {
+  return consume(<| left = n |>)
+}

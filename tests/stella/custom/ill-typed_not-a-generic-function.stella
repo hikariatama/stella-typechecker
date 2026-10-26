@@ -1,0 +1,12 @@
+// @expect-error ERROR_NOT_A_GENERIC_FUNCTION
+language core;
+
+extend with #universal-types;
+
+fn identity(value : Nat) -> Nat {
+  return value
+}
+
+fn main(value : Nat) -> Nat {
+  return identity[Nat](value)
+}
